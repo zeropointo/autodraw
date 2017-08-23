@@ -16,13 +16,13 @@ class Main():
 
 		drawing = getattr(drawings, drawingName)              # Retrieve the drawing the user selected.
 
-		x1 = drawing[str(0)][0]
-		y1 = drawing[str(0)][1]
+		x1 = drawing[0][0]
+		y1 = drawing[0][1]
 		pyautogui.moveRel(x1, y1, speed)                      # Move the mouse to the first point.
 
 		for i in range(1, len(drawing)):                      # Drag the mouse from point to point.
-			x2 = drawing[str(i)][0]
-			y2 = drawing[str(i)][1]
+			x2 = drawing[i][0]
+			y2 = drawing[i][1]
 			pyautogui.dragRel(x2, y2, speed)
 
 
